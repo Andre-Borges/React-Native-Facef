@@ -2,9 +2,10 @@ import {Button, Card, Input, Text} from '@ui-kitten/components';
 import React, {Component} from 'react';
 import {inject, observer} from 'mobx-react';
 
+import {TextInputMask} from 'react-native-masked-text';
+
 import HomeStore from '../../stores/home.store';
 import {StyleSheet} from 'react-native';
-import {refDecorator} from 'mobx/lib/internal';
 
 interface Props {
   homeStore: HomeStore;
@@ -25,19 +26,27 @@ export default class Home extends Component<Props> {
     return (
       <>
         <Card style={styles.card}>
-          <Text>Etanol:</Text>
-          <Input
+          <Text style={styles.text}>Etanol:</Text>
+          <TextInputMask
+            type={'money'}
             value={etanol.toString()}
             onChangeText={etanol => handleForm({etanol})}
+            style={[styles.section5, styles.textInputMask]}
           />
-          <Text>Gasolina:</Text>
-          <Input
+          <Text style={[styles.section15, styles.text]}>Gasolina:</Text>
+          <TextInputMask
+            type={'money'}
             value={gasolina.toString()}
             onChangeText={gasolina => handleForm({gasolina})}
+            style={[styles.section5, styles.textInputMask]}
           />
 
-          <Button onPress={() => calculate()}>Calcular</Button>
-          <Text style={styles.paragraph}>{resultado}</Text>
+          <Button
+            style={[styles.btnCalcular, styles.section30]}
+            onPress={() => calculate()}>
+            Calcular
+          </Button>
+          <Text style={[styles.paragraph]}>{resultado}</Text>
         </Card>
       </>
     );
@@ -52,14 +61,36 @@ const styles = StyleSheet.create({
     padding: 8,
   },
   paragraph: {
-    margin: 24,
+    marginTop: 30,
     fontSize: 18,
     fontWeight: 'bold',
     textAlign: 'center',
+    color: '#fff',
   },
   card: {
     flex: 1,
-    backgroundColor: '#7159c1',
     justifyContent: 'center',
+    backgroundColor: '#24292E',
+  },
+  text: {
+    color: '#fff',
+  },
+  textInputMask: {
+    backgroundColor: '#fff',
+  },
+  btnCalcular: {
+    color: '#000000',
+    backgroundColor: '#04d361',
+    borderWidth: 0,
+    borderColor: 'transparent',
+  },
+  section5: {
+    marginTop: 5,
+  },
+  section15: {
+    marginTop: 15,
+  },
+  section30: {
+    marginTop: 30,
   },
 });

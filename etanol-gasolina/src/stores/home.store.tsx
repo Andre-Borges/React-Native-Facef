@@ -11,9 +11,9 @@ export default class HomeStore {
       const value = Number(etanol) / Number(gasolina);
 
       if (value > 0.7) {
-        this.resultado = 'Vale a pena gasolina';
+        this.resultado = 'Vale a pena abastecer com gasolina';
       } else if (value < 0.7) {
-        this.resultado = 'Vale a pena etanol';
+        this.resultado = 'Vale a pena abastecer com etanol';
       } else {
         this.resultado = 'São equivalentes';
       }
@@ -23,7 +23,7 @@ export default class HomeStore {
   @action handleForm = input => {
     const key = Object.keys(input)[0];
     const value = input[key];
-    this[key] = value;
+    this[key] = value.replace('R$', '').replace(',', '.');
   };
 }
 const homeStore = new HomeStore();

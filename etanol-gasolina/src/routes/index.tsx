@@ -13,10 +13,9 @@ function Routes() {
         <Stack.Screen
           options={{
             headerTitle: 'Etanol ou Gasolina?',
-            headerTitleAlign: 'center',
             headerTintColor: '#ffffff',
             headerStyle: {
-              backgroundColor: '#7159c1',
+              backgroundColor: '#24292E',
             },
           }}
           name="Home"
