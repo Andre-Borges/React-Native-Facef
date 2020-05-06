@@ -11,11 +11,11 @@ export default class HomeStore {
       const value = Number(etanol) / Number(gasolina);
 
       if (value > 0.7) {
-        this.resultado = 'Vale a pena abastecer com gasolina';
+        this.resultado = 'Vale a pena abastecer com gasolina!';
       } else if (value < 0.7) {
-        this.resultado = 'Vale a pena abastecer com etanol';
+        this.resultado = 'Vale a pena abastecer com etanol!';
       } else {
-        this.resultado = 'São equivalentes';
+        this.resultado = 'São equivalentes!';
       }
     }
   };

@@ -15,7 +15,7 @@ function Routes() {
             headerTitle: 'Etanol ou Gasolina?',
             headerTintColor: '#ffffff',
             headerStyle: {
-              backgroundColor: '#24292E',
+              backgroundColor: '#212121',
             },
           }}
           name="Home"

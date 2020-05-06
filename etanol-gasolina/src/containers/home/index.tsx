@@ -54,12 +54,6 @@ export default class Home extends Component<Props> {
 }
 
 const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    justifyContent: 'center',
-    paddingTop: '10',
-    padding: 8,
-  },
   paragraph: {
     marginTop: 30,
     fontSize: 18,
@@ -70,7 +64,9 @@ const styles = StyleSheet.create({
   card: {
     flex: 1,
     justifyContent: 'center',
-    backgroundColor: '#24292E',
+    backgroundColor: '#212121',
+    borderWidth: 0,
+    borderRadius: 0,
   },
   text: {
     color: '#fff',
@@ -80,7 +76,7 @@ const styles = StyleSheet.create({
   },
   btnCalcular: {
     color: '#000000',
-    backgroundColor: '#04d361',
+    backgroundColor: '#00897b',
     borderWidth: 0,
     borderColor: 'transparent',
   },
