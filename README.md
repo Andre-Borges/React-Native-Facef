@@ -3,7 +3,7 @@
 - Calculadora que verifica se compensa abastecer com álcool ou gasolina.
 
 <h1>  
-  <img src="etanol-gasolina/readme-assets/readme_img.png" width="600"/>
+  <img src="etanol-gasolina/readme-assets/app.png" />
 </h1>
 
 ## Instalação / Configuração
