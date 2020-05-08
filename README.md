@@ -2,6 +2,10 @@
 
 - Calculadora que verifica se compensa abastecer com álcool ou gasolina.
 
+<h1>  
+  <img src="etanol-gasolina/readme-assets/readme_img.png" width="600"/>
+</h1>
+
 ## Instalação / Configuração
 
 - Pré-requisitos: Para rodar o projeto react-native em seu celular ou emulador você precisa de algumas
